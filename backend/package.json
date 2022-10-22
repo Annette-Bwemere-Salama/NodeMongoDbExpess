@@ -4,12 +4,16 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "dev": "env-cmd -f ./env/.env.dev node server.js",
+    "prod": "env-cmd -f ./env/.env.prod node server.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "mongoose": "^6.6.7"
+  },
+  "devDependencies": {
+    "env-cmd": "^10.1.0"
   }
 }
